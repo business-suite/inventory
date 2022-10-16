@@ -9,6 +9,40 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[hasclass('settings')]" position="inside" >
                     <div class="app_settings_block" data-string="Inventory" string="Inventory" data-key="stock" groups="stock.group_stock_manager">
+                        <h2>Units of Measure</h2>
+                        <div class="row mt16 o_settings_container" id="product_general_settings">
+                            <div class="col-12 col-lg-6 o_setting_box" id="weight_uom_setting">
+                                <div class="o_setting_left_pane">
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="product_weight_in_lbs" string="Weight"/>
+                                    <div class="text-muted">
+                                        Define your weight unit of measure
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="product_weight_in_lbs" class="o_light_label" widget="radio"
+                                                   options="{'horizontal': true}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box" id="manage_volume_uom_setting">
+                                <div class="o_setting_right_pane">
+                                    <label for="product_volume_volume_in_cubic_feet" string="Volume"/>
+                                    <div class="text-muted">
+                                        Define your volume unit of measure
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="product_volume_volume_in_cubic_feet" class="o_light_label"
+                                                   widget="radio" options="{'horizontal': true}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <h2>Products</h2>
                         <div class="row mt16 o_settings_container" name="product_setting_container">
                             <div class="col-12 col-lg-6 o_setting_box" id="product_attributes">
@@ -70,42 +104,9 @@
                                 <div style="margin-top:15px" class="o_setting_right_pane">
                                     <a href="#menu_id=111&amp;action=134" class="d-block" data-section="260"
                                        data-menu-xmlid="product.menu_product_categories">
-                                        <b>Product Categories</b>
+                                        Product Categories
                                     </a>
 
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Units of Measure</h2>
-                        <div class="row mt16 o_settings_container" id="product_general_settings">
-                            <div class="col-12 col-lg-6 o_setting_box" id="weight_uom_setting">
-                                <div class="o_setting_left_pane">
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="product_weight_in_lbs" string="Weight"/>
-                                    <div class="text-muted">
-                                        Define your weight unit of measure
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt16">
-                                            <field name="product_weight_in_lbs" class="o_light_label" widget="radio"
-                                                   options="{'horizontal': true}"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 o_setting_box" id="manage_volume_uom_setting">
-                                <div class="o_setting_right_pane">
-                                    <label for="product_volume_volume_in_cubic_feet" string="Volume"/>
-                                    <div class="text-muted">
-                                        Define your volume unit of measure
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt16">
-                                            <field name="product_volume_volume_in_cubic_feet" class="o_light_label"
-                                                   widget="radio" options="{'horizontal': true}"/>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
