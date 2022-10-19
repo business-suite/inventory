@@ -4,7 +4,7 @@
 {
     'name': 'Inventory',
     'version': '1.0',
-    'category': 'Sales/Sales',
+    'category': 'Inventory/Inventory',
     'depends': ['base', 'mail', 'uom'],
     'description': """
 This is the base module for managing products and pricelists in Odoo.
