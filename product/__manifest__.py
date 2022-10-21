@@ -36,6 +36,7 @@ Print product labels with barcode.
         'views/product_template_views.xml',
         'views/product_pricelist_views.xml',
         'views/res_partner_views.xml',
+        'views/res_config_settings_view.xml',
         'report/product_reports.xml',
         'report/product_product_templates.xml',
         'report/product_template_templates.xml',
@@ -47,6 +48,7 @@ Print product labels with barcode.
     ],
     'installable': True,
     'auto_install': False,
+    'application': True,
     'assets': {
         'web.assets_backend': [
             'product/static/src/js/**/*',

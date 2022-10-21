@@ -7,109 +7,7 @@
             <field name="priority" eval="30"/>
             <field name="inherit_id" ref="base.res_config_settings_view_form" />
             <field name="arch" type="xml">
-                <xpath expr="//div[hasclass('settings')]" position="inside" >
-                    <div class="app_settings_block" data-string="Inventory" string="Inventory" data-key="stock" groups="stock.group_stock_manager">
-                        <h2>Units of Measure</h2>
-                        <div class="row mt16 o_settings_container" id="product_general_settings">
-                            <div class="col-12 col-lg-6 o_setting_box" id="weight_uom_setting">
-                                <div class="o_setting_left_pane">
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="product_weight_in_lbs" string="Weight"/>
-                                    <div class="text-muted">
-                                        Define your weight unit of measure
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt16">
-                                            <field name="product_weight_in_lbs" class="o_light_label" widget="radio"
-                                                   options="{'horizontal': true}"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 o_setting_box" id="manage_volume_uom_setting">
-                                <div class="o_setting_right_pane">
-                                    <label for="product_volume_volume_in_cubic_feet" string="Volume"/>
-                                    <div class="text-muted">
-                                        Define your volume unit of measure
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt16">
-                                            <field name="product_volume_volume_in_cubic_feet" class="o_light_label"
-                                                   widget="radio" options="{'horizontal': true}"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2>Products</h2>
-                        <div class="row mt16 o_settings_container" name="product_setting_container">
-                            <div class="col-12 col-lg-6 o_setting_box" id="product_attributes">
-                                <div class="o_setting_left_pane">
-                                    <field name="group_product_variant"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="group_product_variant"/>
-                                    <a href="https://www.odoo.com/documentation/15.0/applications/sales/sales/products_prices/products/variants.html" title="Documentation" class="o_doc_link" target="_blank"></a>
-                                    <div class="text-muted">
-                                        Set product attributes (e.g. color, size) to manage variants
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt8" attrs="{'invisible': [('group_product_variant', '=', False)]}">
-                                            <button name="%(product.attribute_action)d" icon="fa-arrow-right" type="action" string="Attributes" class="btn-link"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 o_setting_box" id="sell_purchase_uom">
-                                <div class="o_setting_left_pane">
-                                    <field name="group_uom"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="group_uom"/>
-                                    <a href="https://www.odoo.com/documentation/15.0/applications/inventory_and_mrp/inventory/management/products/uom.html" title="Documentation" class="o_doc_link" target="_blank"></a>
-                                    <div class="text-muted">
-                                        Sell and purchase products in different units of measure
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt8" attrs="{'invisible': [('group_uom', '=', False)]}">
-                                            <button name="%(uom.product_uom_categ_form_action)d" icon="fa-arrow-right" type="action" string="Units Of Measure" class="btn-link"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 o_setting_box"
-                                id="manage_product_packaging"
-                                title="Manage product packagings (e.g. pack of 6 bottles, box of 10 pieces)">
-                                <div class="o_setting_left_pane">
-                                    <field name="group_stock_packaging"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="group_stock_packaging"/>
-                                    <a href="https://www.odoo.com/documentation/15.0/applications/inventory_and_mrp/inventory/management/products/usage.html#packaging" title="Documentation" class="o_doc_link" target="_blank"></a>
-                                    <div class="text-muted">
-                                        Manage product packagings (e.g. pack of 6 bottles, box of 10 pieces)
-                                    </div>
-                                    <div class="content-group">
-                                        <div class="mt8" attrs="{'invisible': [('group_stock_packaging', '=', False)]}">
-                                            <button name="%(product.action_packaging_view)d" icon="fa-arrow-right" type="action" string="Product Packagings" class="btn-link"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-12 o_setting_box" id="devel_tool">
-                                <div style="margin-top:15px" class="o_setting_right_pane">
-                                    <a href="#menu_id=111&amp;action=134" class="d-block" data-section="260"
-                                       data-menu-xmlid="product.menu_product_categories">
-                                        Product Categories
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
+                <xpath expr="//div[hasclass('product_setting')]" position="after" >
                         <h2>Operations</h2>
                         <div class="row mt16 o_settings_container" name="operations_setting_container">
                             <div class="col-12 col-lg-6 o_setting_box"
@@ -480,7 +378,6 @@
                             <div id="sale_security_lead"/>
                             <div id="purchase_po_lead"/>
                         </div>
-                    </div>
                 </xpath>
             </field>
         </record>
