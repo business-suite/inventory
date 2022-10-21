@@ -8,6 +8,14 @@
             <field name="res_model">product.attribute</field>
             <field name="view_mode">tree,form</field>
         </record>
+
+        <record id="product_category_list_view2" model="ir.actions.act_window">
+            <field name="name">Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record id="res_config_settings_view_form" model="ir.ui.view">
             <field name="name">res.config.settings.view.form.inherit.stock</field>
             <field name="model">res.config.settings</field>
@@ -104,15 +112,13 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="col-12 o_setting_box" id="devel_tool">
                                 <div style="margin-top:15px" class="o_setting_right_pane">
-                                    <a href="#menu_id=111&amp;action=134" class="d-block" data-section="260"
-                                       data-menu-xmlid="product.menu_product_categories">
-                                        Product Categories
-                                    </a>
-
+                                    <div class="content-group">
+                                        <div class="mt8" attrs="{'invisible': [('group_product_variant', '=', False)]}">
+                                            <button name="%(product.product_category_list_view2)d" icon="fa-arrow-right" type="action" string="Product Categories" class="btn-link"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
