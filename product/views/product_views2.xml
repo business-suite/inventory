@@ -847,7 +847,7 @@ action = {
         <field name="name">Product Variants</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.product</field>
-        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_mode">kanban,tree,form,kanban</field>
     </record>
 <menuitem id="menu_stock_inventory_control" name="Products" parent="menu_stock_root" sequence="0"/>
     <menuitem id="menu_product_variant_config_stock" name="Products" action="product_template_action_product"
